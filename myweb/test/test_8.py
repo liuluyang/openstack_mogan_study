@@ -18,6 +18,4 @@ class Stu(Person):
 P = Person('xiaoli')
 S = Stu('XIao',12)
 print P
-P
 print S
-S

@@ -2,166 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="361d8166-76f2-4395-94ae-9d6a8aadac8e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/locale/zh_CN/LC_MESSAGES/messages.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/app.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/link.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/root.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/controller.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/host_aggregate.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/schemas/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/schemas/aggregate_host.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/schemas/user.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/types.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/controllers/v1/users.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/expose.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/hooks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/validation/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/api/validation/parameter_types.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/cmd/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/cmd/api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/cmd/myweb.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/common/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/common/exception.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/common/i18n.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/conf/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/conf/api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/api_myweb.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/api_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/engine_api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/engine_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/mywe.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/myweb.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/alembic.ini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/alembic/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/alembic/env.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/alembic/script.py.mako" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/alembic/versions/48da0e13796d_create_user_table.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/sqlalchemy_/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/test.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/db/test_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/locale/zh_CN/LC_MESSAGES/messages.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/objects/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/objects/aggregate.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/objects/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/objects/fields.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/objects/user.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/MiniService/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/MiniService/app.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/MiniService/service.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_collections/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_collections/fifo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_eventlet/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_eventlet/test_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_functools/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_functools/test_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_getattribute.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_os.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_os/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_os/env.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/_routes/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/_routes/demo_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/_routes/demo_2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/_routes/demo_3.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/_routes/route_demo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/api_conf.ini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/app/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/app/drinking_fountain.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/app/hydrant.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/app/shower.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/app/tap.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/boiler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/load_app_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/load_app_2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/purifier.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/root.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/server_log/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/server_log/log_api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/_paste/server_log/log_conf.ini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/decoration.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/exception-test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/exit.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/alphabet_soup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/build_a_car.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/distance.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/example_utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/listener.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/make_flow.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/retry_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/retry_times.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/simple_linear.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/test_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/test_2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/test_3.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/test_4.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/test_5.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/test_6.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/flow/workflowdemo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/gcd_.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/i18n.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/inbuild/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/inbuild/hashlib_.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/jsonschemas/schemas_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/list_tup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/messages.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/metaclass/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/metaclass/filter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/metaclass/orm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/metaclass/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/object/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/object/jc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/object/metaclass.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/object/test_set.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/olso_log_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/oslo_conf_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/deadthreading.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/dump.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/gevent_.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/haxx.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/json.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/multiprocess.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/pool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/process_.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/queue.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/process/threading_.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rabbitmq/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rabbitmq/receive.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rabbitmq/send.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rpc-cli.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rpc-server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rpc/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rpc/app.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rpc/client.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/rpc/server.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test-1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_3.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_4.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_5.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_6.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_7.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_8.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/test_bug.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myweb/test/unicode.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setup.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myweb/test/test_8.py" afterPath="$PROJECT_DIR$/myweb/test/test_8.py" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -258,7 +99,18 @@
     <favorites_list name="untitled" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="test_8.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myweb/test/test_8.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7431507">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -322,8 +174,8 @@
         <option value="$PROJECT_DIR$/myweb/test/metaclass/filter.py" />
         <option value="$PROJECT_DIR$/myweb/test/_paste/api_conf.ini" />
         <option value="$PROJECT_DIR$/myweb/test/_paste/_routes/route_demo.py" />
-        <option value="$PROJECT_DIR$/myweb/test/test_8.py" />
         <option value="$PROJECT_DIR$/myweb/test/oslo_conf_test.py" />
+        <option value="$PROJECT_DIR$/myweb/test/test_8.py" />
       </list>
     </option>
   </component>
@@ -392,6 +244,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="myweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openstack_mogan_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openstack_mogan_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -769,9 +639,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21709532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21709532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -837,13 +707,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myweb/test/flow/example_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="28" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myweb/test/flow/listener.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1180,14 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myweb/test/test_8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1205,6 +1060,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81335616">
           <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myweb/test/messages.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myweb/test/test_8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7431507">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
           <folding />
         </state>
       </provider>
