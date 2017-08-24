@@ -15,3 +15,5 @@ def test():
     LOG.info("Oslo Logging %s",111111)
     LOG.warning("Oslo Logging")
     LOG.error("Oslo Logging")
+
+test()
