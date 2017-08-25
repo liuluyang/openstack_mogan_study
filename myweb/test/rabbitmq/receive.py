@@ -14,5 +14,5 @@ channel.basic_consume(callback,
                       no_ack=True
                       )
 
-print 'Waiting for message . to exit press ctrl+c'
+print 'Waiting for message .to exit press ctrl+c'
 channel.start_consuming()

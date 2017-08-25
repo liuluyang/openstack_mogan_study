@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import joinedload
-
+from sqlalchemy import and_
 import time
 
 from myweb.db import engine_test as models
@@ -16,7 +16,7 @@ _engine = create_engine('mysql+mysqlconnector://root:root@localhost:3306/myweb')
 def make_models(engine):
     models.Base.metadata.create_all(engine)
 
-make_models(_engine)
+#make_models(_engine)
 
 def get_session():
     engine = _engine
@@ -31,7 +31,7 @@ def update(model,data):
     return model
 
 
-class connection(object):
+class Connection(object):
 
     def __init__(self):
         pass
@@ -295,8 +295,8 @@ class connection(object):
 
 
 user_data = [
-             {'username':'wangyang','password':'123123'},
-             {'username':'xiaoli','password':'123412','email':'tianqi@qq.com'}
+             {'username':'wan','password':'123123'},
+             {'username':'xiai','password':'123412','email':'tianqi@qq.com'}
              ]
 
 article_data = [
@@ -330,7 +330,7 @@ userinfo_data = [
 ]
 
 
-db_server = connection()
+db_server = Connection()
 
 for i in user_data:
     #db_server.user_create(i)
