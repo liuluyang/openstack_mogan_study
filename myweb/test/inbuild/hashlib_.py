@@ -6,14 +6,14 @@ _md5 = hashlib.md5()
 
 _md5.update(_str)
 _str_md5 = _md5.hexdigest()
-#print len(_str_md5),_str_md5
+print len(_str_md5),_str_md5
 
 _str = '748274'
 _md5 = hashlib.md5()
 
 _md5.update(_str)
 _str_md5 = _md5.hexdigest()
-#print len(_str_md5),_str_md5
+print len(_str_md5),_str_md5
 
 import random
 import json
@@ -31,4 +31,5 @@ def passwd_md5(password):
     _passwd_md5 = _md5.hexdigest()
     return _passwd_md5
 
-#print passwd_md5('1')
+print passwd_md5('11')
+print passwd_md5('11')
