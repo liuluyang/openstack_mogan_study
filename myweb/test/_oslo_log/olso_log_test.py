@@ -10,10 +10,12 @@ DOMAIN = "demo"
 logging.register_options(CONF)
 logging.setup(CONF, DOMAIN)
 
+
 def test():
     # Oslo Logging uses INFO as default
     LOG.info("Oslo Logging %s",111111)
     LOG.warning("Oslo Logging")
     LOG.error("Oslo Logging")
 
-test()
+if __name__ == '__main__':
+    test()
