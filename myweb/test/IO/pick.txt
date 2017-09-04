@@ -1,0 +1,9 @@
+(dp0
+S'age'
+p1
+I21
+sS'name'
+p2
+S'bob'
+p3
+s.
