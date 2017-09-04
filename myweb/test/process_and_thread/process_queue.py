@@ -38,7 +38,8 @@ def read(q):
     print('Process to read: %s' % os.getpid())
     while True:
         time.sleep(random.random())
-        value = q.get(True)
+        #value = q.get(True)
+        value = 1
         print('Get %s from queue.' % value)
 
 def read_2(q):
@@ -46,7 +47,8 @@ def read_2(q):
     num = 0
     while num<3:
         #time.sleep(random.random())
-        value = q.get(True)
+        #value = q.get(True)
+        value=1
         num +=1
         print('Get %s from queue.' % value),os.getpid()
 
@@ -75,3 +77,4 @@ if __name__=='__main__':
     pp.terminate()
     end = time.time()
     print '%0.2f'%(end-start)
+    print q.qsize()
