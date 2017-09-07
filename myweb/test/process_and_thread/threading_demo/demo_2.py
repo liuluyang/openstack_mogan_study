@@ -3,12 +3,13 @@ import time, threading
 
 # 假定这是你的银行存款:
 balance = 0
-
+l = []
 def change_it(n):
     # 先存后取，结果应该为0:
     global balance
     balance = balance + n
     balance = balance - n
+    l.append(balance)
 
 def run_thread(n):
     for i in range(10000):
@@ -20,4 +21,4 @@ t1.start()
 t2.start()
 t1.join()
 t2.join()
-print(balance)
+print(balance),'#'
