@@ -10,6 +10,8 @@ def main():
     s.connect((host, port))
     while True:
         content = raw_input('>>>')
+        if not content:
+            s.send('nothing')
         s.send(content)
         d = s.recv(1024)
         print 'result :',d
