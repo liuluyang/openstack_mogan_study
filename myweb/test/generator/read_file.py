@@ -24,6 +24,7 @@ def read_file_by_line():
             break
         else:
             content = r.next()
+            print type(content)
             if content:
                 print content
             else:

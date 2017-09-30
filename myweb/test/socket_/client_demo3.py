@@ -3,7 +3,7 @@
 import time
 from socket import *
 
-ADDR, PORT = 'localhost', 9001
+ADDR, PORT = 'localhost', 8080
 
 
 def connect_func():
@@ -20,7 +20,7 @@ def main():
     client = connect_func()
     while 1:
         try:
-            if client:
+            if isinstance(client, socket):
                 cmd = raw_input('>>:').strip()
                 if len(cmd) == 0: continue
                 if cmd == 'exit': break

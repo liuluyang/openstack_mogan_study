@@ -1,4 +1,4 @@
-
+#coding:utf8
 
 
 class Stu(object):
@@ -15,3 +15,20 @@ def t():
 
 t()
 t()
+
+print u'斯蒂芬'
+
+
+def generator_t():
+    print ('start')
+    yield 1
+
+def normal_():
+    return 1
+
+print (generator_t(), type(generator_t()))
+print (normal_(), type(normal_()))
+
+t = generator_t()
+print (t.next())
+#print (next(t))

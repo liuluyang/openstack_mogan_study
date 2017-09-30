@@ -5,6 +5,8 @@ urls = [
 from eventlet.greenpool import GreenPool
 import eventlet
 from eventlet.green import urllib2
+from eventlet import greenthread
+
 
 def fetch(url):
     print url
@@ -13,3 +15,5 @@ def fetch(url):
 pool = eventlet.GreenPool()
 for body in pool.imap(fetch, urls):
     print("got body", len(body))
+
+print 'end'
