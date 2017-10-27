@@ -15,8 +15,8 @@ def main():
     Manager.register('get_result_queue', callable=lambda:result_queue)
     manager = Manager(address=('127.0.0.1',9001), authkey='abc')
     #manager.start()
-    #manager = manager.get_server()
-    #manager.serve_forever()
+    manager = manager.get_server()
+    manager.serve_forever()
 
     t = manager.get_task_queue()
     r = manager.get_result_queue()

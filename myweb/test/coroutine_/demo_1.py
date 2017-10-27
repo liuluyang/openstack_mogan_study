@@ -13,7 +13,7 @@ def consumer():
         #time.sleep(1)
         print('[CONSUMER] Consuming %s...' % n)
         time.sleep(2)
-        r = '200 OK'
+        r =n #'200 OK'
 
 def produce(c):
     print c.send(None)

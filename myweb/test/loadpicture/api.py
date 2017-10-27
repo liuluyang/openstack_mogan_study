@@ -41,8 +41,8 @@ def main_gevent():
 
 if __name__ == '__main__':
     #main()
-    main_thread()
-    #main_gevent()
+    #main_thread()
+    main_gevent()
 
 
 

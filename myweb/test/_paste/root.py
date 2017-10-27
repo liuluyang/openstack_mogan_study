@@ -9,3 +9,4 @@ class Root(object):
 
 def app_factory(global_config, in_arg):
     return Root(in_arg)
+
