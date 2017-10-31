@@ -107,18 +107,21 @@ class UsersController(rest.RestController):
         #print remainder,user_id
         #return UserController(user_id), remainder
 
-    @expose.expose(None, wtypes.text)
+    @expose.expose(wtypes.text, wtypes.text)
     def get_one(self, id):
+        from oslo_config import cfg
+        conf = cfg.CONF
+        print conf.api.port
         print 'get one user'
         print id
         print pecan.request.path.split('/')[:-1][-1]
-        #db_conn = request.db_conn
-        #users = db_conn.list_users()
-        #db_conn = request.db_conn
-        #db_conn.create_user('xiaoming')
-        #print db_conn.list_users(),'hi i am user list'
-        #for i in db_conn.list_users():
-            #print i,i.name,i.id,i.user_id
+        # db_conn = request.db_conn
+        # users = db_conn.list_users()
+        # db_conn = request.db_conn
+        # db_conn.create_user('xiaoming')
+        # print db_conn.list_users(),'hi i am user list'
+        # for i in db_conn.list_users():
+        #     print i,i.name,i.id,i.user_id
         '''
         users = example_users_list
         users_list = []
@@ -130,6 +133,7 @@ class UsersController(rest.RestController):
             u.email = user.email
             users_list.append(u)
         '''
+        return 'get one user'
         #return Users(users=users_list)
 
     @expose.expose(None, wtypes.text, wtypes.text,wtypes.text, status_code=201 )
@@ -229,7 +233,9 @@ class UsersController(rest.RestController):
         print id,'delete id'
         return {'name':'dd','user':1,'user_id':'2'}
 
-    @expose.expose(None)
+    @expose.expose(wtypes.text)
     def get_all(self):
         print 'get all'
+        return 'get all users'
+
 

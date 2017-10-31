@@ -22,6 +22,10 @@ name = {
     'type': 'string', 'minLength': 1, 'maxLength': 255,
 }
 
+name_2 = {
+    'type':'string', 'minLength':1, 'maxLength':255,
+}
+
 
 description = {
     'type': ['string', 'null'], 'minLength': 0, 'maxLength': 255,
@@ -68,6 +72,15 @@ extra = {
     'additionalProperties': False
 }
 
+metadata = {
+    'type':'object',
+    'patternProperties':{
+        '^[a-zA-Z0-9-_:. ]{1,255}$': {
+            'type':'string', 'maxLength':255
+        }
+    },
+    'additionalProperties':False
+}
 
 mac_address = {
     'type': 'string',

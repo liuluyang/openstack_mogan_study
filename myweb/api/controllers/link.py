@@ -30,6 +30,14 @@ def build_url(resource, resource_args, bookmark=False, base_url=None):
     template += '%(args)s' if resource_args.startswith('?') else '/%(args)s'
     return template % {'url': base_url, 'res': resource, 'args': resource_args}
 
+def build_url(resource, resource_args, bookmark=False, base_url=None):
+    if base_url is None:
+        base_url = pecan.request.public_url
+
+    template = '%(url)s/%(res)s' if bookmark else '%(url)s/v1/%(res)s'
+    template += '%(args)s' if resource_args.startswith('?') else '/%(args)s'
+    return template % {'url':base_url, 'res' :resource, 'args':resource_args}
+
 
 class Link(base.APIBase):
     """A link representation."""
@@ -56,6 +64,15 @@ class Link(base.APIBase):
                           "eaaca217-e7d8-47b4-bb41-3f99f20eed89",
                      rel="bookmark")
         return sample
-#d = {'href':'www.baidu.com','rel':'self','type':wtypes.Unset}
-#link = Link(**d)
-#print link
+
+class Link(base.APIBase):
+    href = wtypes.text
+    rel = wtypes.text
+    type = wtypes.text
+
+    @staticmethod
+    def make_link(rel_name, url, resource, resource_args,
+                  bookmark=False, type=wtypes.Unset):
+        href = build_url(resource, resource_args, bookmark=bookmark,
+                         base_url=url)
+        return Link(href=href, rel=rel_name, type=type)

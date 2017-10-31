@@ -1,8 +1,6 @@
 from pecan import rest
-import pecan
 from wsme import types as wtypes
 from myweb.api.controllers import base
-import wsmeext.pecan as wsme_pecan
 from myweb.api import expose
 from myweb.api.controllers.v1 import controller as v1_controller
 

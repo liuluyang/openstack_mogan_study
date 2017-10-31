@@ -31,7 +31,7 @@ from oslo_config import cfg
 CONF = cfg.CONF
 
 
-#LOG = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 class MoganException(Exception):
@@ -51,7 +51,6 @@ class MoganException(Exception):
     safe = False
 
     def __init__(self, message=None, **kwargs):
-        print kwargs,'i am k'
         self.kwargs = kwargs
 
         if 'code' not in self.kwargs:
@@ -61,11 +60,8 @@ class MoganException(Exception):
                 pass
 
         if not message:
-            print 'is not message'
             try:
-                print type(self._msg_fmt)
                 message = self._msg_fmt % kwargs
-                print type(message),'mm'
 
             except Exception:
                 # kwargs doesn't match a variable in self._msg_fmt

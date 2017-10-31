@@ -49,3 +49,13 @@ class APIBase(wtypes.Base):
 
 #print APIBase.created_at,'this create time'
 #print APIBase.updated_at,'this update time'
+print APIBase.__registry__
+print APIBase._wsme_attributes
+print APIBase._wsme_DataHolderClass
+for i in dir(APIBase):
+    print i
+
+b = APIBase(name=1)
+#b.name = 's'
+#print b.name
+

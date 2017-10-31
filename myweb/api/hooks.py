@@ -1,7 +1,6 @@
 from pecan import hooks
-#from oslo_context import context
-#from oslo_config import cfg
-#from myweb.db import api as db_api
+from pecan import hooks
+from oslo_context import context
 from oslo_context import context
 
 class DBHook(hooks.PecanHook):
@@ -64,6 +63,11 @@ class DBHook(hooks.PecanHook):
         state.request.public_url = state.request.host_url
         print 'ok'
         '''
+
+class ConHook(hooks.PecanHook):
+
+    def before(self, state):
+        pass
 
 
 
