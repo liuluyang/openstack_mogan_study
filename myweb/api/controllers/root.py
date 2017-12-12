@@ -1,3 +1,4 @@
+import pecan
 from pecan import rest
 from wsme import types as wtypes
 from myweb.api.controllers import base
@@ -43,3 +44,17 @@ class RootController(rest.RestController):
     @expose.expose(wtypes.text)
     def _default(self):
         return 'default'
+
+    # @pecan.expose()
+    # def _route(self, args):
+    #     """Overrides the default routing behavior.
+    #
+    #     It redirects the request to the default version of the mogan API
+    #     if the version number is not specified in the url.
+    #     """
+    #     print args
+    #     print 'this is _route'
+    #     if args[0] and args[0] not in self._versions:
+    #         args = [self._default_version] + args
+    #         print args
+    #     return super(RootController, self)._route(args)

@@ -30,14 +30,14 @@ def  main_2():
 
 
 if __name__ == '__main__':
-    #main()
+    main()
     #main_2()
-    from multiprocessing import Pool
-    l = [main, main_2]
-    p = Pool()
-    for i in l:
-        p.apply_async(i)
-    p.close()
-    p.join()
+    # from multiprocessing import Pool
+    # l = [main, main_2]
+    # p = Pool()
+    # for i in l:
+    #     p.apply_async(i)
+    # p.close()
+    # p.join()
 
 

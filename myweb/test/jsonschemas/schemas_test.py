@@ -60,4 +60,38 @@ metadata = {
     'additionalProperties': False
 }
 
-json_schema({"h":" "}, metadata)
+
+def multi_params(schema):
+    """Macro function for use in JSONSchema to support query parameters that
+    may have multiple values.
+    """
+    return {'type': 'array', 'items': schema}
+
+
+# NOTE: We don't check actual values of queries on params
+# which are defined as the following common_param.
+# Please note those are for backward compatible existing
+# query parameters because previously multiple parameters
+# might be input and accepted.
+common_query_param = multi_params({'type': 'string'})
+
+
+non_negative_integer = {
+    'type': ['integer', 'string'],
+    'pattern': '^[0-9]*$', 'minimum': 0, 'minLength': 1
+}
+
+
+server_groups_query_param = {
+    'type': 'object',
+    'properties': {
+        'all_projects': common_query_param,
+        'limit': multi_params(non_negative_integer),
+        'offset': multi_params(non_negative_integer),
+    },
+    # For backward compatible changes
+    'additionalProperties': True
+}
+
+#json_schema({"h":" "}, metadata)
+json_schema({'all_projects':['True'],'limit':2}, server_groups_query_param)

@@ -78,8 +78,8 @@ class AggregateHosts(Base):
         table_args()
     )
     id = Column(Integer, primary_key=True)
-    aggregate_uuid = Column(String(36), nullable=False)
     host_id = Column(String(36), nullable=False)
+    aggregate_uuid = Column(String(36), nullable=False)
     aggregate = orm.relationship(
         Aggregates,
         backref='hosts',

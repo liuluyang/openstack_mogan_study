@@ -276,3 +276,7 @@ def _aggregate_host_query(context, aggregate_id):
 def _aggregate_metadata_get_query(context, aggregate_id):
     return model_query(context, models.AggregateMetadata).\
         filter_by(aggregate_uuid=aggregate_id)
+
+if __name__ == '__main__':
+    c = Connection()
+    print c.aggregate_get_all(context={})
