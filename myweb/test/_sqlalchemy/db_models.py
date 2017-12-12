@@ -1,6 +1,5 @@
 # coding:utf8
 from oslo_db.sqlalchemy import models
-from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, ForeignKey, Text, schema, \
     DateTime, Table, Boolean
@@ -8,7 +7,7 @@ from sqlalchemy import orm
 from oslo_db.sqlalchemy import types as db_types
 
 
-class MoganBase(  # models.TimestampMixin,
+class MoganBase(#models.TimestampMixin,
         models.ModelBase):
     metadata = None
 
@@ -43,7 +42,7 @@ class User(Base):
     userinfo = orm.relationship(
             'UserInfo',
             backref='user',
-            uselist=False
+            uselist=False  #一对一 如果有多个只会取一个 并进行提示并非异常
     )
 
 

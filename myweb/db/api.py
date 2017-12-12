@@ -57,7 +57,7 @@ class Connection(object):
         except exc.NoResultFound as e:
             print e
 
-        #return user
+        return user
 
     def list_users(self):
         session = get_session()
@@ -100,14 +100,14 @@ class Connection(object):
 
 conn = Connection()
 #print conn
-#conn.create_user('bo')
-#conn.create_book('jo','4aca4206-638d-4c33-8c99-00d91ff5778')
+#conn.create_user('bp')
+#conn.create_book('jp','6014db0f-e912-4640-ba34-57c1e63c082e')
 
 user_list = conn.list_users()
 book_list = conn.book_list()
 
 for user in user_list:
-    print dict(user), user.name, user.id, user.books
+    print dict(user), user.name, user.id, user.books_detail
     for i in user.books:
         print i.name
 print '#'*20
@@ -118,7 +118,7 @@ print '#'*20
 #print conn.get_user('4aca4206-638d-4c33-8c99-00d91ff5778a').name
 
 
-conn.delete_user('bob')
+#conn.delete_user('bob')
 
 
 

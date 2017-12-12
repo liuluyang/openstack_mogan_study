@@ -62,6 +62,7 @@ class UserInfo(Base):
     user_id = Column(Integer, ForeignKey('users.id'))
 
 
+
 class Article(Base):
 
     __tablename__ = 'articles'

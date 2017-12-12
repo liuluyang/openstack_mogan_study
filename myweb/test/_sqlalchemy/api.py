@@ -26,8 +26,11 @@ for data in user_data:
 for i in db_server.user_get_all():
     print (i.id,i.username,i.password,i.email)
     if i.userinfo:
-        print 'info-name:',i.userinfo.name
+        print 'info-name:',i.userinfo.id
     print 'articles-list:',i.articles
+
+print '获取指定用户详细信息'
+print db_server.user_info_get_one(user_id=1).user.username
 
 #创建文章
 for i in article_data:
@@ -69,6 +72,9 @@ for i in db_server.tag_get_all():
 
 #给文章添加标签 false
 #db_server.add_tag_for_article(1,1)
+
+
+
 
 
 

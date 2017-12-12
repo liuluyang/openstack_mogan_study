@@ -240,3 +240,13 @@ class Connection(object):
             print 'add tag for article success'
         except Exception as e:
             print e
+
+    def user_info_get_one(self, user_id):
+        session = get_session()
+        user_info = session.query(models.UserInfo).filter_by(id=user_id)
+        try:
+            user_info = user_info.one()
+        except Exception as e:
+            print e
+
+        return user_info

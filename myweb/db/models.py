@@ -45,6 +45,10 @@ class User(Base):
     # 一对多:
     books = relationship('Book')
 
+    @property
+    def books_detail(self):
+        return [b.name for b in self.books]
+
 class Book(Base):
     __tablename__ = 'book'
 
@@ -52,3 +56,4 @@ class Book(Base):
     name = Column(String(20))
     # “多”的一方的book表是通过外键关联到user表的:
     user_id = Column(String(36), ForeignKey('user.id'))
+    user = relationship(User)
