@@ -26,8 +26,15 @@ for data in user_data:
 for i in db_server.user_get_all():
     print (i.id,i.username,i.password,i.email)
     if i.userinfo:
-        print 'info-name:',i.userinfo.id
+        print 'info-name:',i.userinfo
     print 'articles-list:',i.articles
+
+print '获取指定用户'
+u = db_server.user_get_one(user_id=1)
+print u.userinfo        #这里不需要options(orm.joinedload())方法就可以获取其他数据
+                        #但是mogan上需要这个方法进行惰性加载
+                        #问题解决：如果加上session.close()使会话结束 就需要进行惰性加载
+print u.articles
 
 print '获取指定用户详细信息'
 print db_server.user_info_get_one(user_id=1).user.username
@@ -38,8 +45,9 @@ for i in article_data:
     pass
 
 #获取文章列表
+print '获取文章列表'
 for i in db_server.article_get_all():
-    print i.id,i.title,i.context,i.user_id,i.cate_id,i.author,i
+    print i.id,i.title,i.context,i.user_id,i.cate_id,i.author.username
     print 'category:',i.category.name
     print 'tags-list:',i.tags
 
@@ -67,6 +75,7 @@ for i in tags_data:
     pass
 
 #文章标签列表
+print '\'文章标签列表\''
 for i in db_server.tag_get_all():
     print i.id,i.name,i.articles
 

@@ -39,11 +39,18 @@ class User(Base):
     username = Column(String(36), nullable=False, unique=True)
     password = Column(String(36), nullable=False)
     email = Column(String(36), nullable=True)
-    userinfo = orm.relationship(
-            'UserInfo',
-            backref='user',
-            uselist=False  #一对一 如果有多个只会取一个 并进行提示并非异常
-    )
+    # userinfo = orm.relationship(
+    #         'UserInfo',
+    #         backref='user',
+    #         uselist=False  #一对一 如果有多个只会取一个 并进行提示并非异常
+    #                        #如果把此参数注释 就会恢复一对多
+    # )
+    # userinfo = orm.relationship(
+    #     'UserInfo',
+    #     #backref = orm.backref('user', uselist=False)
+    #     backref = 'user',
+    #     #uselist = False
+    # )
 
 
 class UserInfo(Base):
@@ -53,6 +60,15 @@ class UserInfo(Base):
     phone = Column(String(36))
     address = Column(String(36))
     user_id = Column(Integer, ForeignKey('users.id'))
+    user = orm.relationship(
+        User,
+        #backref='userinfo',
+        #uselist=False   #这个参数在有外键的一方 限制不了一对一
+        backref=orm.backref('userinfo', uselist=False),  #参数这样写可以限制一对一
+        primaryjoin='User.id==UserInfo.user_id'  #目前不清楚这个参数的作用 好像有没有都可以
+    )
+    #只要是需要根据orm.relationship的关系获取附加信息 不管它在哪一方都需要进行
+    #惰性加载
 
 
 class Article(Base):
@@ -89,30 +105,30 @@ article_tag = Table(
         Column('tag_id', Integer, ForeignKey('tags.id'))
 )
 
-'''
-class Article_tag(Base):
-    __tablename__ = 'article_tags'
-    __table_args__ = (
-        schema.UniqueConstraint(
-            'article_id','tag_id',
-            name='uniq_article_tag0'
-        ),
-    )
-    article_id = Column(Integer, ForeignKey('articles.id'))
-    tag_id = Column(Integer, ForeignKey('tags.id'))
-    article = orm.relationship(
-            'Article',
-            backref='article_tags',
-            foreign_keys=article_id,
-            primaryjoin='Article.id == Article_tag.article_id'
-    )
-    tag = orm.relationship(
-            'Tag',
-            backref='article_tags',
-            foreign_keys=tag_id,
-            primaryjoin='Tag.id == Article_tag.tag_id'
-    )
-'''
+#未成功
+# class Article_tag(Base):
+#     __tablename__ = 'article_tags'
+#     __table_args__ = (
+#         schema.UniqueConstraint(
+#             'article_id','tag_id',
+#             name='uniq_article_tag0'
+#         ),
+#     )
+#     article_id = Column(Integer, ForeignKey('articles.id'))
+#     tag_id = Column(Integer, ForeignKey('tags.id'))
+    # article = orm.relationship(
+    #         'Article',
+    #         backref='article_tags',
+    #         foreign_keys=article_id,
+    #         primaryjoin='Article.id == Article_tag.article_id'
+    # )
+    # tag = orm.relationship(
+    #         'Tag',
+    #         backref='article_tags',
+    #         foreign_keys=tag_id,
+    #         primaryjoin='Tag.id == Article_tag.tag_id'
+    # )
+
 class Tag(Base):
     __tablename__ = 'tags'
     id = Column(Integer, primary_key=True)

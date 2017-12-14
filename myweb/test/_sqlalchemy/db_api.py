@@ -2,7 +2,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import joinedload
-from sqlalchemy import and_
+from sqlalchemy import and_, or_
 import time
 
 from myweb.test._sqlalchemy import db_models as models
@@ -75,13 +75,15 @@ class Connection(object):
     def user_get_one(self, user_id):
         session = get_session()
         user_query = session.query(models.User).filter_by(
-            id=user_id)  # .options(joinedload('articles'))
+            id=user_id).options(joinedload('articles'))
+        user_query = user_query.options(joinedload('userinfo'))
 
-        # the_filter = [models.User.articles.has(title='python')]
-        # user_query = user_query.filter(or_(*the_filter))
+        #the_filter = [models.User.articles.any(title='python')]
+        #user_query = user_query.filter(or_(*the_filter))
 
         try:
             user = user_query.one()
+            session.close()
         except Exception as e:
             print e
 
@@ -103,8 +105,13 @@ class Connection(object):
     def article_get_all(self):
         session = get_session()
         articles = session.query(models.Article)
+        option_list = ['author','category','tags']
+        for op in option_list:
+            articles = articles.options(joinedload(op))
         articles = articles.all()
+
         print 'get all articles success'
+        session.close()
         return articles
 
     def article_update(self, article, article_id):
@@ -163,21 +170,28 @@ class Connection(object):
 
     def tag_get_all(self):
         session = get_session()
-        tag_query = session.query(models.Tag).all()
-
-        return tag_query
+        tag_query = session.query(models.Tag).options(joinedload('articles'))
+        tag_query = tag_query.filter(models.Tag.id<=2)
+        session.close()
+        print '计数',tag_query.count()
+        return tag_query.all()
 
     def tag_destroy(self):
         session = get_session()
-        # result = session.query(models.Tag).filter(models.Tag.name.in_(['1','on']))\
+        result = session.query(models.Tag).filter(models.Tag.name.in_(['1','on']))\
         # .delete(synchronize_session=False)
-        result = session.query(models.Tag).filter(
-            models.Tag.name == 'onfff').delete()
+        #result = session.query(models.Tag).filter(
+        #    models.Tag.name == 'on').delete()
         # time.sleep(3)
-        session.commit()
-        # 操作结束 但未结束会话 且查询的字段没有索引时 会锁住整张表 无法进行其他操作
+        #session.commit()
+        # 操作结束 但未结束会话 且查询的字段没有索引时 会锁住整张表 无法进行其他操作???????
 
-        print result
+        session2 = get_session()
+        tag = session2.query(models.Tag).filter_by(id=5).one()
+        print tag
+        #session.commit()
+
+        print result.one().name
 
     def tag_update(self, values, tag_id):
         session = get_session()
@@ -214,14 +228,22 @@ class Connection(object):
         session2 = get_session()
 
         user1 = session1.query(models.User).filter_by(
-            username='lizhi').with_lockmode('update').one()
-        user2 = session2.query(models.User).filter_by(id=1).one()
-        user2.username = 'jokef'
-        session2.add(user2)
+            username='xiai').with_lockmode('update').all()
+        #session1.commit()
+        #session1.close()    #如果不结束会话 下面的操作会等待解锁超时 只针对同一条数据
+        #user2 = session2.query(models.User).filter_by(username='wan-new').all()
+        user2 = session2.query(models.User).filter_by(username='wan-new').\
+            with_lockmode('update').all()
+
+        print user2
+        user2[0].username = 'wan-ne'
+        session2.add(user2[0])
         session2.commit()
+        session2.close()
 
         # time.sleep(4)
         # session1.commit()
+        # session1.close()
         # session2.commit()
 
     def add_tag_for_article(self, article_id, tag_id):
@@ -244,9 +266,28 @@ class Connection(object):
     def user_info_get_one(self, user_id):
         session = get_session()
         user_info = session.query(models.UserInfo).filter_by(id=user_id)
+        user_info = user_info.options(joinedload('user'))
         try:
             user_info = user_info.one()
+            session.close()
         except Exception as e:
             print e
 
         return user_info
+
+
+    def userinfo_user_create(self):
+        session = get_session()
+        userinfo = models.UserInfo(name='test_name')
+        u1 = models.User(username='u1', password=123)
+        u2 = models.User(username='u2', password=123)
+
+        userinfo.user = u1
+        session.add(userinfo)
+        session.commit()
+
+if __name__ == '__main__':
+    c = Connection()
+    #c.tag_destroy()
+    #c.lockmode_test()
+    c.userinfo_user_create()
