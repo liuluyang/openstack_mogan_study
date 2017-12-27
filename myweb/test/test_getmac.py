@@ -15,7 +15,6 @@ def mac_computer_name_get():
             myname = host.read()
         except:
             pass
-    return mymac, myname
 
 a, b = mac_computer_name_get()
 print a,b
