@@ -18,4 +18,4 @@ def hash_show(s):
 if __name__ == '__main__':
     s = 'hello python'
     rs = hash_show(s)
-    pprint(rs)
+    print(rs)
