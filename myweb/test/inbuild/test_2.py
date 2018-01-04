@@ -1,7 +1,6 @@
 #coding:utf8
 
 from hashlib import md5, sha1, sha224, sha256, sha384, sha512
-from pprint import pprint
 
 hash_funcs = [md5, sha1, sha224, sha256, sha384, sha512]
 
@@ -18,4 +17,4 @@ def hash_show(s):
 if __name__ == '__main__':
     s = 'hello python'
     rs = hash_show(s)
-    pprint(rs)
+    print(rs)
