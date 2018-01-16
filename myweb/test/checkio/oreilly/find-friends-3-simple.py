@@ -23,6 +23,7 @@ def check_connection(args,name1,name2):
         if not con_dict[_key+1]:
             break
         _key +=1
+    print con_dict
     for i in con_dict.values():
         if name2 in i:
             return True

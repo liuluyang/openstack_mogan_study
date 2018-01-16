@@ -22,10 +22,3 @@ def checkio(text):
     return False
 
 print checkio('I neeed HELP')
-
-import re
-
-h = re.findall('h[h|!|\-]*e[e|!|\-]*l[l|!|\-]*p', 'hell h-!!e!!l!!pd')
-a = re.findall('a[a|!|\-]*s[s|!|\-]*a[a|!|\-]*p','')
-u = re.findall('u[u|!|\-]*r[r|!|\-]*g[g|!|\-]*e[e|!|\-]*n[n|!|\-]*t','')
-print h
