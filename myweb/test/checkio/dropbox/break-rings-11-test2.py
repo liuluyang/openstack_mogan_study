@@ -5,7 +5,7 @@ def make_next_num(data):
     rings = data
     nums = [i for s in rings for i in s]
     nums = sorted([(n,len(list(v))) for n,v in groupby(sorted(nums))], key=lambda k:k[1], reverse=True)
-    #print nums
+    print nums
     if len(nums)==sum([n[1] for n in nums]):
         #print 1
         return [n[0] for n in nums]
@@ -13,7 +13,7 @@ def make_next_num(data):
         #print '>2'
         return [n[0] for n in nums if nums[0][1]>1]
 
-#print make_next_num([[1,2],[2,3],[3,4],[4,5],[5,2],[1,6],[6,7],[7,8],[8,9],[9,6],[1,10],[10,11],[11,12],[12,13],[13,10],[1,14],[14,15],[15,16],[16,17],[17,14]])
+print make_next_num([[1,2],[2,3],[3,4],[4,5],[5,2],[1,6],[6,7],[7,8],[8,9],[9,6],[1,10],[10,11],[11,12],[12,13],[13,10],[1,14],[14,15],[15,16],[16,17],[17,14]])
 
 
 #？当得到想要的结果时 如何及时停止 并返回结果
@@ -41,7 +41,7 @@ def checkio(data):
 
 data = [[3,4],[5,6],[2,7],[1,5],[2,6],[8,4],[1,7],[4,5],[9,5],[2,3],[8,2],[2,4],[9,6],[5,7],[3,6],[1,3]]
 data2 = ({1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 4}, {3, 4})
-print checkio(data)
+#print checkio(data)
 #print checkio([[1,2],[2,3],[3,4],[4,5],[5,2],[1,6],[6,7],[7,8],[8,9],[9,6],[1,10],[10,11],[11,12],[12,13],[13,10],[1,14],[14,15],[15,16],[16,17],[17,14]])
 
 def test(data):
