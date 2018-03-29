@@ -11,9 +11,9 @@ print r2.findall(tt)
 r3 = re.compile(r'Tina[\w|\s|\W]*')
 print r3.match(tt).group()
 
-s='1113446777'
+s='-1113446777h54'
 m = re.findall(r'[0-9]',s)
 print m
 
-m = re.search(r'1+',s)
+m = re.search(r'^[-+]*\d*',s)
 print m.group()

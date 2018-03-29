@@ -13,6 +13,7 @@ def checkio(data):
     b = data%1000%100/10
     a = data%1000%100%10
     #print d,c,b,a
+    #return M[num/1000] + C[(num%1000)/100] + X[(num%100)/10] + I[num%10]
     if d>=1:
         result += D[int(d-1)]
     if c>=1:
